@@ -14,7 +14,7 @@ const HomePage = () => {
 
   const dispatch = useDispatch()
   const applicationsArr = useSelector(state => state.applications.applicationsArr)
-  const { isFormOpen, isEditing, isViewingApp, searchQuery } = useSelector(state => state.ui)
+  const { isFormOpen, isViewingApp, searchQuery } = useSelector(state => state.ui)
 
   const filteredApplications = applicationsArr.filter(app => (
     app.company.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -26,7 +26,7 @@ const HomePage = () => {
     <main className="min-h-screen bg-slate-50 px-4 py-6 sm:px-6 lg:px-8">
 
       {/* Application Form Toggle */}
-      {(isFormOpen || isEditing) && <ApplicationForm />}
+      {isFormOpen && <ApplicationForm />}
       {isViewingApp && <ApplicationDetail />}
 
 
@@ -42,7 +42,7 @@ const HomePage = () => {
                 Application Dashboard
               </h1>
               <p className="max-w-2xl text-sm leading-6 text-slate-600">
-                Welcome back. You have <span className="font-semibold text-slate-900">{applicationsArr.length}</span> action job pursuits.
+                Welcome back. You have <span className="font-semibold text-slate-900">{applicationsArr.length}</span> active job pursuits.
               </p>
             </div>
 

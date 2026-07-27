@@ -20,7 +20,7 @@ const RegisterPage = () => {
           </h1>
 
           <p className="mt-2 text-gray-500">
-            Join Sky Mart and start shopping.
+            Join CareerTrack and start organizing your job search.
           </p>
         </div>
 

@@ -5,7 +5,6 @@ const uiSlice = createSlice({
 
   initialState: {
     isFormOpen: false,
-    isEditing: false,
     isViewingApp: null,
     searchQuery: ''
   },
@@ -13,17 +12,14 @@ const uiSlice = createSlice({
   reducers: {
     openAddForm: (state) => {
       state.isFormOpen = true
-      state.editingApp = false
     },
 
     closeForm: (state) => {
       state.isFormOpen = false
-      state.editingApp = false
     },
 
     openEditForm: (state) => {
       state.isFormOpen = true
-      state.editingApp = true
     },
 
     openDetailView: (state, action) => {

@@ -7,7 +7,7 @@ import { useApplicationHandlers } from '../hooks/useApplicationHandlers'
 
 const GridApplicationCard = ({ application }) => {
 
-  const { company, role, status, dateApplied } = application
+  const { company, role, status } = application
 
   const { onEdit, onDelete } = useApplicationHandlers(application)
 

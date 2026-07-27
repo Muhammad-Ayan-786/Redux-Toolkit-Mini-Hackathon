@@ -42,7 +42,7 @@ const Navbar = () => {
               type="text"
               value={searchQuery}
               onChange={(e) => dispatch(setSearchQuery(e.target.value))}
-              placeholder="Search applications..."
+              placeholder="Search applications by company or role ..."
               className="w-full rounded-2xl border border-slate-200 bg-slate-50 py-2.5 pl-9 pr-3 text-sm text-slate-700 shadow-inner shadow-slate-100 outline-none transition focus:border-indigo-300 focus:bg-white focus:ring-4 focus:ring-indigo-100"
             />
           </div>
